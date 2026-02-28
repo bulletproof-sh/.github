@@ -12,6 +12,8 @@ npx @bulletproof-sh/ctrl-daemon
 
 Then open [ctrl.bulletproof.sh](https://ctrl.bulletproof.sh?utm_source=github&utm_medium=readme&utm_campaign=org_profile) and start your favorite coding agent.
 
-## Report a Problem
+## Feedback
 
-Found a bug or have a suggestion? [Open an issue](https://github.com/bulletproof-sh/.github/issues/new/choose) and we'll take a look.
+- **Something broken?** [File a bug report](https://github.com/bulletproof-sh/.github/issues/new?template=bug_report.yml) — include logs, steps to reproduce, and your environment details.
+- **Have an idea?** [Request a feature](https://github.com/bulletproof-sh/.github/issues/new?template=feature_request.yml)
+- **Question?** [Start a discussion](https://github.com/bulletproof-sh/.github/discussions)

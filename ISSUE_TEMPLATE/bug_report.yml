@@ -1,7 +1,12 @@
 name: Bug Report
-description: Report a problem with a Bulletproof tool
+description: Something is broken or not working as expected
 labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! ctrl runs across multiple platforms, browsers, and AI agents — the more detail you provide, the faster we can reproduce and fix the issue.
+
   - type: dropdown
     id: product
     attributes:
@@ -9,27 +14,94 @@ body:
       options:
         - ctrl (web app)
         - ctrl-daemon
+        - ctrl (VS Code extension)
+        - GitHub Actions / CI
         - Other
     validations:
       required: true
+
   - type: textarea
     id: description
     attributes:
       label: What happened?
-      placeholder: Describe the problem you encountered.
+      description: Describe the bug clearly. What were you doing when it occurred?
+      placeholder: |
+        e.g. "The agent avatar disappeared after switching tabs and coming back"
     validations:
       required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Walk us through how to trigger this bug. Numbered steps are ideal.
+      placeholder: |
+        1. Start the daemon with `npx @bulletproof-sh/ctrl-daemon`
+        2. Open ctrl.bulletproof.sh in Chrome
+        3. Start a Claude Code session
+        4. Switch to another tab for ~30 seconds
+        5. Switch back — agent avatar is gone
+    validations:
+      required: true
+
   - type: textarea
     id: expected
     attributes:
       label: What did you expect?
       placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      options:
+        - Every time
+        - Often (more than half the time)
+        - Sometimes
+        - Rarely
+        - Only happened once
+    validations:
+      required: true
+
   - type: textarea
     id: environment
     attributes:
       label: Environment
-      placeholder: |
-        - Browser / OS:
-        - Agent (Claude, Codex, etc.):
-        - Daemon version (if known):
-      render: text
+      description: Fill in as much as you can. This is critical for debugging multi-platform issues.
+      value: |
+        - **OS:** (e.g. macOS 15.3, Windows 11, Ubuntu 24.04)
+        - **Browser:** (e.g. Chrome 133, Firefox 135, Safari 18.3)
+        - **AI agent:** (e.g. Claude Code, Codex CLI, Gemini CLI, Cursor, Windsurf)
+        - **Agent version:** (e.g. `claude --version` output)
+        - **Daemon version:** (run `npx @bulletproof-sh/ctrl-daemon --version`)
+        - **Node/Bun version:** (e.g. `node -v` or `bun -v`)
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs & error output
+      description: |
+        Paste any relevant logs. Check these sources:
+        - **Daemon:** terminal output where you ran `npx @bulletproof-sh/ctrl-daemon`
+        - **Browser console:** open DevTools (F12) → Console tab, filter for errors
+        - **Agent output:** any errors from your coding agent's terminal
+        - **VS Code:** Output panel → select "ctrl" from the dropdown
+      placeholder: Paste logs here. Redact any sensitive information (API keys, file paths, etc).
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or recordings
+      description: If visual, screenshots or a short screen recording help enormously. Drag and drop images here.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else? Network conditions, number of agents running, workspace size, etc.
