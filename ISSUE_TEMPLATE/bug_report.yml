@@ -1,0 +1,35 @@
+name: Bug Report
+description: Report a problem with a Bulletproof tool
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Product
+      options:
+        - ctrl (web app)
+        - ctrl-daemon
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      placeholder: Describe the problem you encountered.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: What should have happened instead?
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        - Browser / OS:
+        - Agent (Claude, Codex, etc.):
+        - Daemon version (if known):
+      render: text
