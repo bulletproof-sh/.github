@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Have an idea to make ctrl better? We'd love to hear it. The more context you provide about your workflow, the better we can design the solution.
+        Have an idea to make ctrl better? I'd love to hear it. The more context you provide about your workflow, the better I can design the solution.
 
   - type: dropdown
     id: product
