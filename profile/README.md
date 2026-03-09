@@ -4,7 +4,7 @@
 
 ![Ctrl Demo](https://raw.githubusercontent.com/bulletproof-sh/.github/main/images/ctrl-demo.gif)
 
-[Watch the full demo](https://www.bulletproof.sh)
+[Watch the full demo](https://www.bulletproof.sh?utm_source=github&utm_medium=readme&utm_campaign=org_profile&utm_content=demo_link)
 
 ## Install
 
