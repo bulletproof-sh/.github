@@ -1,8 +1,10 @@
 # Bulletproof
 
-**[ctrl](https://ctrl.beta.bulletproof.sh?utm_source=github&utm_medium=readme&utm_campaign=org_profile)** — An 8-bit office where your AI coding agents work. Watch Claude, Codex, Gemini, and others code in real time from a shared virtual office.
+**[ctrl](https://www.bulletproof.sh?utm_source=github&utm_medium=readme&utm_campaign=org_profile)** — A pixel art office where your AI coding agents work. Watch Claude, Codex, Gemini, and others code in real time from a shared virtual office.
 
-It's just me building this — I'm trying to make something useful for people who run multiple AI coding agents and want to see what they're all doing at a glance. The daemon watches your agent sessions automatically and the web app renders them as characters in a pixel-art office.
+![Ctrl Demo](https://raw.githubusercontent.com/bulletproof-sh/.github/main/images/ctrl-demo.gif)
+
+[Watch the full demo](https://www.bulletproof.sh)
 
 ## Install
 
@@ -14,11 +16,9 @@ It's just me building this — I'm trying to make something useful for people wh
 
 **Standalone (any editor):**
 ```bash
-npx @bulletproof-sh/ctrl-daemon@beta
+npx @bulletproof-sh/ctrl-daemon@latest
 ```
-Then open [ctrl.beta.bulletproof.sh](https://ctrl.beta.bulletproof.sh?utm_source=github&utm_medium=readme&utm_campaign=org_profile) — start your favorite coding agent and it shows up in the office automatically.
-
-I can't test every combination of agent, IDE, and OS on my own. If you try it with your setup and something breaks (or works!), that feedback is incredibly valuable.
+Then open [ctrl.bulletproof.sh](https://ctrl.bulletproof.sh?utm_source=github&utm_medium=readme&utm_campaign=org_profile) — start your favorite coding agent and it shows up in the office automatically.
 
 ## Get Involved
 
